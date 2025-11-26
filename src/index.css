@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stripes1: #B9D1F0;
+  --stripes2: #FFFFFF;
+  --text-color: #3A4A68;
+  --accent-color: #FB7D3F;
+}
+
+@font-face{
+  font-family: 'The Seasons';
+  src: url('./fonts/TheSeasons.woff2') format('woff2'), 
+  url('./fonts/TheSeasons.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    font-family: 'The Seasons', serif;
+  }
+}
+
+@layer utilities {
+  .bg-striped {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--stripes1) 0px,
+      var(--stripes1) 120px,
+      var(--stripes2) 120px,
+      var(--stripes2) 240px
+    );
+  }
+  
+
+  .font-vibes {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-seasons {
+    font-family: 'The Seasons', serif;
+  }
+
+  .text-navy {
+    color: var(--text-color);
+  }
+
+  .text-orange {
+    color: var(--accent-color);
+  }
+
+  .bg-navy {
+    background-color: var(--text-color);
+  }
+
+  .bg-orange {
+    background-color: var(--accent-color);
+  }
+
+  .bg-light-blue {
+    background-color: var(--stripes1);
+  }
+
+  .border-orange {
+    border-color: var(--accent-color);
+  }
+}
